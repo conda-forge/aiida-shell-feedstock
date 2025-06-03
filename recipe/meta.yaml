@@ -1,5 +1,5 @@
 {% set name = "aiida-shell" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aiida_shell-{{ version }}.tar.gz
-  sha256: b4d37ecc43cd90657540cb45dbaa1f7d41c2fb1e99e8ba0966e4f5262ba2a500
+  sha256: 50d7cd30d266531a7787e3d35ffca0e2e0c95a51bcb3b944fb9ac3f047937422
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
