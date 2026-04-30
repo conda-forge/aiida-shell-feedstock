@@ -1,0 +1,46 @@
+schema_version: 1
+
+context:
+  name: aiida-shell
+  version: "0.8.2"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/aiida_shell-${{ version }}.tar.gz
+  sha256: 7efd2e67cbabe709585fa9c9aaf455bb7da249f2ef9eed2ae0b048a66737e0fd
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - flit-core >=3.4,<4
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - aiida-core >=2.6,<3.dev0,>=2.6.1
+    - dill
+
+tests:
+  - python:
+      imports:
+        - aiida_shell
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: AiiDA plugin that makes running shell commands easy.
+  license: MIT
+  license_file: LICENSE.txt
+  homepage: http://aiida.net
+
+extra:
+  recipe-maintainers:
+    - sphuber
+    - jan-janssen
