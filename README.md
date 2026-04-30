@@ -3,7 +3,7 @@ About aiida-shell-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aiida-shell-feedstock/blob/main/LICENSE.txt)
 
-Home: http://aiida.net
+Home: http://aiida.net/
 
 Package license: MIT
 
@@ -13,11 +13,10 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23861&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aiida-shell-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>
